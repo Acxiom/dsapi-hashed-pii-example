@@ -1,0 +1,37 @@
+---
+applicationName: "Ethan DS-API Hash Enhancer"
+version: "0.1"
+
+#Client Environment Settings
+inFileLocation: "./sampleData/syntheticData.csv"
+outFileLocation: "./sampleData/syntheticDataProcessed.csv"
+fileHeaderRows: 1
+chunkProcessingSize: 5
+
+# IMPORTANT: THIS DETERMINES THE PRIORITY OF THE CONSTRUCTION OF THE HASHED
+#             INPUT INFORMATION. SEE THE GUIDE FOR VALID VALUES
+dataPrioritySteps:
+  - name + email
+  - name + phone
+  - name + address
+  - email
+  - phone
+  - address
+
+#Security Settings
+acxiomKey: ""
+acxiomSecret: ""
+grantType: "client_credentials"
+tokenEndpoint: "https://login.myacxiom.com/api/v1/auth/oauth2/token"
+
+
+#DS-API Settings
+dsapiUri: "https://test.api.acxiom.com/v1"
+dsapiPeopleEndpoint: "https://test.api.acxiom.com/people/"
+lookupType: "sha1"
+limit: 1
+tenant: ""
+role: ""
+format: "json"
+dsapiRequestBundles:
+ - basicDemographics

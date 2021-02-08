@@ -1,0 +1,5 @@
+# Doing this to make sure that we have the default db directory for processing
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
