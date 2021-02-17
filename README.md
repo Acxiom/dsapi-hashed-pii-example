@@ -19,13 +19,14 @@ This python module is provided as a starting point for hashed data processing an
 
  ## Pre-Installation
 
+ - Register for developer account at https://developer.myacxiom.com/
  - Work with Acxiom data specialists to set up a license and get client credentials and secret to use in the module configuration
  
  ## Runtime
 
  - Extract data according to the file layout specifications
  - Create a copy of the config-template.yaml as config-prd.yaml and insert any customizations
-    - Client key/secrect
+    - Client key/secret
     - Input/output file locations
     - DS-API request bundles (data packages)
     - Data chunk sizes (Max 1000)
